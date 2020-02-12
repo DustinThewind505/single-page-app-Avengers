@@ -4,15 +4,17 @@ import { Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import AvengersList from "./components/AvengersList";
 
-function App(){
+function App() {
 
     return (
         <div>
-        <Link to="/">Home</Link>
-        <Link to="/avengers">Avengers</Link>
-        
-        <Route exact path="/" component={Home}/>
-        <Route path="/avengers" component={AvengersList}/>
+            <ul className="navbar">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/avengers">Avengers</Link></li>
+            </ul>
+            <Route exact path="/" component={Home} />
+            <Route path="/avengers" component={AvengersList} />
+
         </div>
     )
 }
