@@ -1,9 +1,13 @@
 import React from "react";
 
-function Avenger(){
-
+function Avenger(props) {
+    console.log(props)
     return (
-        <h1>Ello Poppet</h1>
+        <div>
+            <h1>Ello Poppet</h1>
+            <h3>Ello Poppet</h3>
+            <h3>Ello Poppet</h3>
+        </div>
     )
 }
 

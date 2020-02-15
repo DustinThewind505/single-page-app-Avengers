@@ -3,6 +3,7 @@ import { Route, Link } from "react-router-dom";
 
 import Home from "./components/Home";
 import AvengersList from "./components/AvengersList";
+import Avenger from "./components/Avenger";
 
 function App() {
 
@@ -13,8 +14,8 @@ function App() {
                 <li><Link to="/avengers">Avengers</Link></li>
             </ul>
             <Route exact path="/" component={Home} />
-            <Route path="/avengers" component={AvengersList} />
-
+            <Route exact path="/avengers" component={AvengersList} />
+            <Route path="/avengers/:id" component={Avenger} />
         </div>
     )
 }
