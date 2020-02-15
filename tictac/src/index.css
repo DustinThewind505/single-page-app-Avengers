@@ -48,6 +48,8 @@ body {
   text-decoration: none;
   padding: 24px;
   height: 16px;
+  font-family: 'Akronim', cursive;
+  font-size: 3rem;
 }
 
 .navbar > li > a.activeNavButton {
@@ -84,6 +86,7 @@ body {
   margin-top: 8px;
   font-size: 24px;
   cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .character-card > h2 {
@@ -94,6 +97,10 @@ body {
   margin-top: 8px;
   font-size: 24px;
   cursor: pointer;
+}
+
+.character-card > h4 {
+  font-family: 'Abril Fatface', cursive;
 }
 
 .character-card > p {
@@ -113,6 +120,21 @@ body {
 .character-info-wrapper {
   padding: 36px;
 }
+
+.character-info-wrapper > h1 {
+  font-family: 'Akronim', cursive;
+  font-size: 5rem;
+}
+
+ .character-info-wrapper h3 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3rem;
+ }
+
+ .character-info-wrapper p {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2rem;
+ }
 
 .character-image {
   width: 100vw;
