@@ -7,7 +7,7 @@ import AvengersList from "./components/AvengersList";
 function App() {
 
     return (
-        <div>
+        <div className="App">
             <ul className="navbar">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/avengers">Avengers</Link></li>
