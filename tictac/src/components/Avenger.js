@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Data from "../Data";
 
 function Avenger(props) {
@@ -7,11 +7,14 @@ function Avenger(props) {
 
     console.log(props.match)
     return (
-        <div>
-            <h1>{avenger.nickname}</h1>
-            <h3>Ello Poppet</h3>
-            <h3>Ello Poppet</h3>
+        <Fragment>
+        <img className="character-image" src={avenger.img} alt={avenger.nickname}/>
+        <div className="character-info-wrapper">
+            <h1>{avenger.name}</h1>
+            <h3>({avenger.nickname})</h3>
+            <p>{avenger.description}</p>
         </div>
+        </Fragment>
     )
 }
 
