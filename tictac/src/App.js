@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import AvengersList from "./components/AvengersList";
 import Avenger from "./components/Avenger";
 
+import Data from "./Data";
+
 function App() {
 
     return (
@@ -14,8 +16,8 @@ function App() {
                 <li><Link to="/avengers">Avengers</Link></li>
             </ul>
             <Route exact path="/" component={Home} />
-            <Route exact path="/avengers" component={AvengersList} />
-            <Route path="/avengers/:id" component={Avenger} />
+            <Route exact path="/avengers" render={props => <AvengersList {...props} data={Data}/>} />
+            <Route path="/avengers/:id" render={props => <Avenger {...props} data={Data}/>} />
         </div>
     )
 }
