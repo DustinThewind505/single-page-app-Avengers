@@ -67,14 +67,15 @@ body {
 }
 
 .navbarBottom > li > a {
-  color: #fcf802;
+  color: yellowgreen;
   text-decoration: none;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: 'Akronim', cursive;
   font-size: 3rem;
 }
 
 .navbarBottom > li > a.active {
-  color: yellowgreen;
+  color: #fcf802;
+  text-decoration: underline;
 }
 
 .characters-list-wrapper {
