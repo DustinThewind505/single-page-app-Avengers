@@ -1,10 +1,12 @@
 import React from "react";
 
-function Movies(){
+function Movies(props){
 
 
     return(
-        <h1>Ello Poppet</h1>
+        <ul>
+            {props.data.movies.map(movie => <li key={movie}>{movie}</li>)}
+        </ul>
     )
 }
 

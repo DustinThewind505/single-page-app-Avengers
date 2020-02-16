@@ -15,9 +15,8 @@ function Avenger(props) {
         <div className="character-info-wrapper">
             <h1>{avenger.name}</h1>
             <h3>({avenger.nickname})</h3>
-            <p>{avenger.description}</p>
-            <Link to="/avengers/:id/details">Bio</Link>
-            <Link to="/avengers/:id/movies">Movies</Link>
+            <Link to={`/avengers/${avenger.id}/details`}>Bio</Link>
+            <Link to={`/avengers/${avenger.id}/movies`}>Movies</Link>
             <Route path="/avengers/:id/details" render={() => <Details {...props} data={avenger}/>}/>
             <Route path="/avengers/:id/movies" render={() => <Movies {...props} data={avenger}/>}/>
         </div>

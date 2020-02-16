@@ -1,10 +1,10 @@
 import React from "react";
 
-function Details(){
+function Details(props){
 
 
     return(
-        <h2>Ello Poppet</h2>
+        <p>{props.data.description}</p>
     )
 }
 
