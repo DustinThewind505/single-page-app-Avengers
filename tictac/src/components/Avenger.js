@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 import Movies from "./Movies";
 import Details from "./Details";
@@ -16,8 +16,10 @@ function Avenger(props) {
                 <h1>{avenger.name}</h1>
                 <h3>({avenger.nickname})</h3>
                 <nav>
-                    <Link to={`/avengers/${avenger.id}/details`}>Bio</Link>
-                    <Link to={`/avengers/${avenger.id}/movies`}>Movies</Link>
+                    <ul className="navbar">
+                        <li><NavLink to={`/avengers/${avenger.id}/details`}>Bio</NavLink></li>
+                        <li><NavLink to={`/avengers/${avenger.id}/movies`}>Movies</NavLink></li>
+                    </ul>
                 </nav>
                 <Route path="/avengers/:id/details" render={() => <Details {...props} data={avenger} />} />
                 <Route path="/avengers/:id/movies" render={() => <Movies {...props} data={avenger} />} />

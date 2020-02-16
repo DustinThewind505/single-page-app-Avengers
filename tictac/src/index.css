@@ -61,9 +61,8 @@ body {
   font-size: 3rem;
 }
 
-.navbar > li > a.activeNavButton {
-  background-color: #4285f4;
-  color: white;
+.navbar > li > a.active {
+  color: yellowgreen;
 }
 
 .characters-list-wrapper {
@@ -87,14 +86,13 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.character-card > a {
+.character-card > h3 {
   text-decoration: none;
   color: black;
   font-weight: bold;
   display: block;
   margin-top: 8px;
   font-size: 24px;
-  cursor: pointer;
   font-family: 'Abril Fatface', cursive;
 }
 
