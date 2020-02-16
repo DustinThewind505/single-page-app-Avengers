@@ -16,7 +16,7 @@ function Avenger(props) {
                 <h1>{avenger.name}</h1>
                 <h3>({avenger.nickname})</h3>
                 <nav>
-                    <ul className="navbar">
+                    <ul className="navbarBottom">
                         <li><NavLink to={`/avengers/${avenger.id}/details`}>Bio</NavLink></li>
                         <li><NavLink to={`/avengers/${avenger.id}/movies`}>Movies</NavLink></li>
                     </ul>
