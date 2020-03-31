@@ -14,6 +14,7 @@ function Avenger(props) {
             <img className="character-image" src={avenger.img} alt={avenger.nickname} />
             <div className="character-info-wrapper">
                 <h1>{avenger.name}</h1>
+                <h5>{props.plumbus}</h5>
                 <h3>({avenger.nickname})</h3>
                 <nav>
                     <ul className="navbarBottom">
@@ -28,6 +29,6 @@ function Avenger(props) {
     )
 }
 
-
+Avenger.defaultProps = {plumbus: "schleem"}
 
 export default Avenger;
