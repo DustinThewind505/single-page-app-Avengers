@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/DustinThewind505/single-page-app-Avengers/issues"
   },
-  "homepage": "https://github.com/DustinThewind505/single-page-app-Avengers#readme"
+  "homepage": "https://github.com/DustinThewind505/single-page-app-Avengers#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

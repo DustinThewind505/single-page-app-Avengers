@@ -1,12 +1,39 @@
-const http = require('http');
+const express = require('express');
 
 const PORT = 420;
 
-const server = http.createServer((req, res) => {
+const server = express();
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text-plain');
-    res.end("I love Toasty");
+const colors = [
+    {
+        "color": "black"
+    },
+    {
+        "color": "blue"
+    },
+    {
+        "color": "red"
+    },
+    {
+        "color": "white"
+    },
+    {
+        "color": "silver"
+    },
+    {
+        "color": "salmon"
+    },
+    {
+        "color": "ruby"
+    }
+];
+
+server.get('/', (req, res, next) => {
+    res.status(200).send('I love Toasty!');
+})
+
+server.get('/colors', (req, res) => {
+    res.status(200).json(colors)
 })
 
 server.listen(PORT, () => {
