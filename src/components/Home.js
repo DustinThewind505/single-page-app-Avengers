@@ -4,14 +4,6 @@ function Home() {
   return (
     <div className="home">
       <img
-        // onMouseOver={event =>
-        //   (event.target.src =
-        //     "https://66.media.tumblr.com/fb2a20c08246e0102e10198ec60988c5/tumblr_oopx94VQTR1v6a1bfo1_400.gif")
-        // }
-        // onMouseLeave={event =>
-        //   (event.target.src =
-        //     "http://getwallpapers.com/wallpaper/full/9/4/b/1191411-marvel-avengers-desktop-wallpaper-1920x1080-for-android-40.jpg")
-        // }
         src="https://66.media.tumblr.com/fb2a20c08246e0102e10198ec60988c5/tumblr_oopx94VQTR1v6a1bfo1_400.gif"
         alt="Avengers assembling"
       />
@@ -22,9 +14,9 @@ function Home() {
         }
         onMouseLeave={event =>
           (event.target.src =
-            "http://getwallpapers.com/wallpaper/full/9/4/b/1191411-marvel-avengers-desktop-wallpaper-1920x1080-for-android-40.jpg")
+            "http://majorspoilers.com/wp-content/uploads/2012/10/MarvelZombiesHalloween.jpg")
         }
-        src="http://getwallpapers.com/wallpaper/full/9/4/b/1191411-marvel-avengers-desktop-wallpaper-1920x1080-for-android-40.jpg"
+        src="http://majorspoilers.com/wp-content/uploads/2012/10/MarvelZombiesHalloween.jpg"
         alt="Avengers assembling"
       />
     </div>
