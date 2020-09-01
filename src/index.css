@@ -7,7 +7,7 @@
 html,
 body {
   /* background: rgb(230, 230, 230); */
-  background: red;
+  background: #26a69a;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}  
+}
 
 .home img {
   width: 100%;
@@ -49,7 +49,7 @@ body {
   text-decoration: none;
   padding: 24px;
   height: 16px;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-size: 3rem;
 }
 
@@ -62,7 +62,7 @@ body {
 .navbarBottom > li > a {
   color: yellowgreen;
   text-decoration: none;
-  font-family: 'Akronim', cursive;
+  font-family: "Akronim", cursive;
   font-size: 3rem;
 }
 
@@ -99,7 +99,7 @@ body {
   display: block;
   margin-top: 8px;
   font-size: 24px;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
 }
 
 .character-card > h2 {
@@ -113,7 +113,7 @@ body {
 }
 
 .character-card > h4 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
 }
 
 .character-card > p {
@@ -135,19 +135,19 @@ body {
 }
 
 .character-info-wrapper > h1 {
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
   font-size: 5rem;
 }
 
- .character-info-wrapper h3 {
-  font-family: 'Abril Fatface', cursive;
+.character-info-wrapper h3 {
+  font-family: "Abril Fatface", cursive;
   font-size: 2.5rem;
- }
+}
 
- .character-info-wrapper p {
-  font-family: 'Abril Fatface', cursive;
+.character-info-wrapper p {
+  font-family: "Abril Fatface", cursive;
   font-size: 1.4rem;
- }
+}
 
 .character-image {
   width: 100vw;
