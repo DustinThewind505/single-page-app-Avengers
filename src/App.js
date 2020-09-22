@@ -4,6 +4,7 @@ import { Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import AvengersList from "./components/AvengersList";
 import Avenger from "./components/Avenger";
+import Footer from './components/Footer';
 
 import Data from "./Data";
 
@@ -28,6 +29,7 @@ function App() {
         path="/avengers/:id"
         render={props => <Avenger {...props} data={Data} />}
       />
+      <Footer />
     </div>
   );
 }

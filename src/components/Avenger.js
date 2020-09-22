@@ -9,7 +9,7 @@ function Avenger(props) {
     hero => Number(props.match.params.id) === hero.id
   );
 
-  //console.log("This one", avenger);
+
   return (
     <Fragment>
       <img
@@ -23,10 +23,10 @@ function Avenger(props) {
         <nav>
           <ul className="navbarBottom">
             <li>
-              <NavLink to={`/avengers/${avenger.id}/details`}>Bio</NavLink>
+              <NavLink to={`/avengers/${avenger.id}/movies`}>Movies</NavLink>
             </li>
             <li>
-              <NavLink to={`/avengers/${avenger.id}/movies`}>Movies</NavLink>
+              <NavLink to={`/avengers/${avenger.id}/details`}>Bio</NavLink>
             </li>
           </ul>
         </nav>
@@ -38,6 +38,7 @@ function Avenger(props) {
           path="/avengers/:id/movies"
           render={() => <Movies {...props} data={avenger} />}
         />
+        <button onClick={() => props.history.push('/avengers')}>Back</button>
       </div>
     </Fragment>
   );

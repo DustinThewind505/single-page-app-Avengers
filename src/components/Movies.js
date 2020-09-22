@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Movies(props) {
   return (
-    <ul>
+    <ul className='movie-list'>
       {props.data.movies.map(movie => (
         <li key={movie}>{movie}</li>
       ))}
