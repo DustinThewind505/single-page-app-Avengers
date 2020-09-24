@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Route, NavLink } from "react-router-dom";
+import { Route, NavLink, useRouteMatch } from "react-router-dom";
 
 import Movies from "./Movies";
 import Details from "./Details";
@@ -8,6 +8,8 @@ function Avenger(props) {
   const avenger = props.data.find(
     hero => Number(props.match.params.id) === hero.id
   );
+
+  const { path, url } = useRouteMatch();
 
 
   return (
@@ -23,21 +25,19 @@ function Avenger(props) {
         <nav>
           <ul className="navbarBottom">
             <li>
-              <NavLink to={`/avengers/${avenger.id}/movies`}>Movies</NavLink>
+              <NavLink to={`${url}/movies`}>Movies</NavLink>
             </li>
             <li>
-              <NavLink to={`/avengers/${avenger.id}/details`}>Bio</NavLink>
+              <NavLink to={`${url}/details`}>Bio</NavLink>
             </li>
           </ul>
         </nav>
-        <Route
-          path="/avengers/:id/details"
-          render={() => <Details {...props} data={avenger} />}
-        />
-        <Route
-          path="/avengers/:id/movies"
-          render={() => <Movies {...props} data={avenger} />}
-        />
+        <Route path={`${path}/details`}>
+          <Details data={avenger} />
+        </Route>
+        <Route path={`${path}/movies`}>
+          <Movies data={avenger} />
+        </Route>
         <button onClick={() => props.history.push('/avengers')}>Back</button>
       </div>
     </Fragment>
