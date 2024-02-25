@@ -208,6 +208,10 @@ footer div {
   height: 100px;
 }
 
+.footer-right {
+  display: hidden;
+}
+
 .footer-middle img {
   width: 40%;
 }
