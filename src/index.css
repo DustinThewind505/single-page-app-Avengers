@@ -16,15 +16,21 @@ body {
   width: 100%;
 }
 
-.home {
+.home-header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.home img {
+.home-header img {
   height: 91vh;
   width: 50%;
+}
+
+.home-accordian {
+  background-color: yellow;
+  margin: 1rem auto;
+  width: 85%;
 }
 
 .navbar {
