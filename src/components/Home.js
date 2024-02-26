@@ -1,11 +1,33 @@
 import React, { useState } from "react";
 
 function Home(props) {
-  const [singleAccordianSelecion, setSingleAccordianSelection] = useState(null)
+  const [singleAccordianSelecion, setSingleAccordianSelection] = useState(null);
+  const [multipleAccordianSelection, setMultipleAccordianSelection] = useState([]);
+  const [accordianStateButton, setAccordianStateButton] = useState(false);
 
-  const handleSingleselection = (id) => {
+  const handleSingleSelection = (id) => {
     setSingleAccordianSelection(id);
-    console.log(singleAccordianSelecion);
+  }
+
+  const handleMultipleSelection = (id) => {
+    let newArray = [...multipleAccordianSelection];
+    const selectionIndex = newArray.indexOf(id);
+
+    if(newArray.includes(id)) {
+      newArray.splice(selectionIndex, 1);
+    } else {
+      newArray.push(id);
+    };
+
+    setMultipleAccordianSelection(newArray);
+    console.log(multipleAccordianSelection)
+  }
+
+  const handleAccordianStateButton = () => {
+    setSingleAccordianSelection(null);
+    setMultipleAccordianSelection([]);
+
+    setAccordianStateButton(!accordianStateButton);
   }
 
   return (
@@ -28,11 +50,12 @@ function Home(props) {
           alt="Avengers assembling"
         />
       </div>
+      <button className="accordian-state-button" onClick={() => handleAccordianStateButton()}>Enable Multiple selections</button>
       {props.data.map(avenger => (
-        <div className="home-accordian" onClick={() => handleSingleselection(avenger.id)} key={avenger.id}>
+        <div className="home-accordian" onClick={!accordianStateButton ? () => handleSingleSelection(avenger.id) : () => handleMultipleSelection(avenger.id)} key={avenger.id}>
           <h2>{avenger.name}</h2>
           <span>+</span>
-          {singleAccordianSelecion === avenger.id ?<p>{avenger.description}</p> : null}
+          {singleAccordianSelecion === avenger.id || multipleAccordianSelection.indexOf(avenger.id) !== -1 ?<p>{avenger.description}</p> : null}
         </div>
       ))}
     </div>
