@@ -67,7 +67,7 @@ body {
   text-decoration: underline;
 }
 
-.characters-list-wrapper {
+.characters-list-wrapper div {
   padding-top: 40px;
   display: flex;
   flex-flow: row wrap;
